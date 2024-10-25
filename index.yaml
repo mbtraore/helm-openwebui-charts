@@ -69,6 +69,6 @@ entries:
     - https://github.com/otwld/ollama-helm/
     - https://hub.docker.com/r/ollama/ollama
     urls:
-    - https://github.com/mbtraore/helm-openwebui-charts.git/openwebui-3.4.0.tgz
+    - https://mbtraore.github.io/helm-openwebui-charts/xpenwebui-3.4.0.tgz
     version: 3.4.0
 generated: "2024-10-25T15:23:52.628087+02:00"
