@@ -1,46 +1,29 @@
-apiVersion: v2
-name: openwebui
-# This is the chart version. This version number should be incremented each time you make changes
-# to the chart and its templates, including the app version.
-# Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 3.4.0
-# This is the version number of the application being deployed. This version number should be
-# incremented each time you make changes to the application. Versions are not expected to
-# follow Semantic Versioning. They should reflect the version the application is using.
-# It is recommended to use it with quotes.
-appVersion: "0.3.32"
-
-home: https://www.openwebui.com/
-icon: https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png
-
-description: "Open WebUI: A User-Friendly Web Interface for Chat Interactions 👋"
-
-keywords:
-  - llm
-  - chat
-  - web-ui
-
-sources:
-  - https://github.com/open-webui/helm-charts
-  - https://github.com/open-webui/open-webui/pkgs/container/open-webui
-  - https://github.com/otwld/ollama-helm/
-  - https://hub.docker.com/r/ollama/ollama
-
 annotations:
   licenses: MIT
-
+apiVersion: v2
+appVersion: 0.1.107
+version: 3.4.0
+name: open-webui
+description: "Chart to deploy Open WebUI, a ChatGPT-Style Web UI Client for Ollama 🦙."
+home: https://openwebui.com/
+icon: https://openwebui.com/favicon.png/
+maintainers:
+- email: mbarre.traore-ext@iledefrance-mobilites.fr
+  name: mbtraore
+  url: https://mbarre.fr
+sources:
+- https://github.com/jmorganca/ollama/
+- https://github.com/open-webui/open-webui
+- https://github.com/braveokafor/open-webui-helm/
 dependencies:
-  - name: ollama
-    repository: https://otwld.github.io/ollama-helm/
-    version: ">=0.24.0"
-    condition: ollama.enabled
-  - name: library-chart
-    version: 1.5.23
-    repository: https://inseefrlab.github.io/helm-charts-interactive-services    
-# - name: pipelines
-#   repository: https://helm.openwebui.com
-#   version: ">=0.0.1"
-#   import-values:
-#     - child: service
-#       parent: pipelines.service
-#   condition: pipelines.enabled
+- name: ollama
+  repository: https://otwld.github.io/ollama-helm/
+  # tags:
+  # - ollama
+  version: 0.63.0
+  condition: ollama.enabled
+keywords:
+- ai
+- ollama
+- llm
+- llama
