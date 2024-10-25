@@ -7,7 +7,7 @@ entries:
     name: library-chart
     type: library
     urls:
-    - https://mbtraore.github.io/library-chart-1.5.28.tgz
+    - https://mbtraore.github.io/helm-openwebui-charts/library-chart-1.5.28.tgz
     version: 1.5.28
   ollama:
   - annotations:
@@ -37,7 +37,7 @@ entries:
     - https://github.com/otwld/ollama-helm
     type: application
     urls:
-    - https:https://mbtraore.github.io/ollama-0.63.0.tgz
+    - https:https://mbtraore.github.io/helm-openwebui-charts/ollama-0.63.0.tgz
     version: 0.63.0
   openwebui:
   - annotations:
@@ -69,6 +69,6 @@ entries:
     - https://github.com/otwld/ollama-helm/
     - https://hub.docker.com/r/ollama/ollama
     urls:
-    - https://mbtraore.github.io/helm-openwebui-charts/xpenwebui-3.4.0.tgz
+    - https://mbtraore.github.io/helm-openwebui-charts/openwebui-3.4.0.tgz
     version: 3.4.0
 generated: "2024-10-25T15:23:52.628087+02:00"
