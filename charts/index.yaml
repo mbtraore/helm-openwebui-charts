@@ -1,0 +1,74 @@
+apiVersion: v1
+entries:
+  library-chart:
+  - apiVersion: v2
+    created: "2024-10-25T15:23:52.629119+02:00"
+    digest: 6a95bb853ec98e604f39b42885b94a0ab20071a4488430db9252b05a5cbcac33
+    name: library-chart
+    type: library
+    urls:
+    - https://github.com/mbtraore/helm-openwebui-charts.git/library-chart-1.5.28.tgz
+    version: 1.5.28
+  ollama:
+  - annotations:
+      artifacthub.io/category: ai-machine-learning
+      artifacthub.io/changes: |
+        - kind: changed
+          description: upgrade app version to 0.3.14
+    apiVersion: v2
+    appVersion: 0.3.14
+    created: "2024-10-25T15:23:52.630904+02:00"
+    description: Get up and running with large language models locally.
+    digest: 2001ece9d5ccb9f9eeba72bfaa6c8aea8e33cdc83aa0d20f99c1cdd849c6915e
+    home: https://ollama.ai/
+    icon: https://ollama.ai/public/ollama.png
+    keywords:
+    - ai
+    - llm
+    - llama
+    - mistral
+    kubeVersion: ^1.16.0-0
+    maintainers:
+    - email: contact@otwld.com
+      name: OTWLD
+    name: ollama
+    sources:
+    - https://github.com/ollama/ollama
+    - https://github.com/otwld/ollama-helm
+    type: application
+    urls:
+    - https://github.com/mbtraore/helm-openwebui-charts.git/ollama-0.63.0.tgz
+    version: 0.63.0
+  openwebui:
+  - annotations:
+      licenses: MIT
+    apiVersion: v2
+    appVersion: 0.3.32
+    created: "2024-10-25T15:23:52.634489+02:00"
+    dependencies:
+    - condition: ollama.enabled
+      name: ollama
+      repository: https://otwld.github.io/ollama-helm/
+      version: '>=0.24.0'
+    - name: library-chart
+      repository: https://inseefrlab.github.io/helm-charts-interactive-services
+      version: 1.5.23
+    description: "Open WebUI: A User-Friendly Web Interface for Chat Interactions
+      \U0001F44B"
+    digest: 56cb0e43fc713d546728fcbec5c399495df10867c9fc6739806811067b49ad44
+    home: https://www.openwebui.com/
+    icon: https://raw.githubusercontent.com/open-webui/open-webui/main/static/favicon.png
+    keywords:
+    - llm
+    - chat
+    - web-ui
+    name: openwebui
+    sources:
+    - https://github.com/open-webui/helm-charts
+    - https://github.com/open-webui/open-webui/pkgs/container/open-webui
+    - https://github.com/otwld/ollama-helm/
+    - https://hub.docker.com/r/ollama/ollama
+    urls:
+    - https://github.com/mbtraore/helm-openwebui-charts.git/openwebui-3.4.0.tgz
+    version: 3.4.0
+generated: "2024-10-25T15:23:52.628087+02:00"
